@@ -1,14 +1,11 @@
+name: yjtest
+
+on: [push]
+
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Use AWS Credentials
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        run: |
-          echo "hello world"
+    # run 뒤에는 실제 작동하는 코드를 넣어야 한다.
+    - name: hello world 출력
+      run: echo Hello, world!
